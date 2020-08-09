@@ -1,0 +1,108 @@
+.container {
+    min-width: 400px;
+    width: 40%;
+    height: 200px;
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+    float: left;
+    border: solid 1px lightgrey;
+    color: #333;
+    margin-left: 12px;
+    font-family: Avenir-Book;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.container:hover {
+    width: 350px;
+    height: 200px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px 5px rgba(230, 230, 230, 0.6);
+    -moz-box-shadow: 0 0 10px 5px rgba(230, 230, 230, 0.6);
+    -webkit-box-shadow: 0 0 10px 5px rgba(211, 211, 211, 0.6);
+    -o-box-shadow: 0 0 10px 5px rgba(198, 198, 198, 0.6);
+}
+
+.container.hover {
+    width: 350px;
+    height: 200px;
+    border: solid 1px rgb(172, 172, 172);
+    background-color: white;
+    cursor: pointer;
+    border-radius: 0mm;
+    box-shadow: 0 0 10px 5px rgba(230, 230, 230, 0.6);
+    -moz-box-shadow: 0 0 10px 5px rgba(230, 230, 230, 0.6);
+    -webkit-box-shadow: 0 0 10px 5px rgba(211, 211, 211, 0.6);
+    -o-box-shadow: 0 0 10px 5px rgba(198, 198, 198, 0.6);
+}
+
+.container #title {
+    display: flex;
+    /* align-self: flex-start; */
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 90%;
+    height: 30%;
+}
+
+.container img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+    display: block;
+}
+
+.container .subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* margin-left: 150px; */
+    overflow: hidden;
+    font-size: 15px;
+    height: 40%;
+}
+
+.container .subtitle p {
+    margin: 0;
+    /* display: flex;
+    justify-self: flex-start; */
+    text-align: left;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 75px;
+    /* white-space: pre-wrap; */
+    text-overflow: ellipsis;
+}
+
+.container .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.wrapper {
+    width: 40%;
+    /* height: 100%; */
+    min-width: 400px;
+}
+
+.wrapper .icon {
+    cursor: pointer;
+}
+
+.wrapper .bookmarkingContainer {
+    display: flex;
+    position: relative;
+    width: 50px;
+    top: 48px;
+    left: 97%;
+    margin-right: 0px;
+}
