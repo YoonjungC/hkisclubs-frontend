@@ -53,7 +53,7 @@ export default class Faq extends React.Component {
             and participate in different events. If you are in too many clubs,
             it can be a challenge as you will have to find a way to balance
             schoolwork and your extracurriculars. There isn't a set amount of
-            clubs you should join but try joining the different clubs at the
+            clubs you should join but try joining different clubs at the
             beginning of the year and later in the month you can choose to stay
             in the ones you wish to continue participating in.{" "}
           </p>
@@ -72,15 +72,6 @@ export default class Faq extends React.Component {
             Different clubs meet on different dates. You can check the club page to search for clubs meeting on certain days. In a club meeting, members
             may discuss plans for the club and events that are coming up for you
             to participate in.{" "}
-          </p>
-
-          <h4> How do I apply for a leadership position within the club? </h4>
-          <p>
-            {" "}
-            You should first sign up as a member of the club if you want to apply for a position related to that club.
-            However, note that being a leader takes a lot of responsibility. Thus, current club leaders
-            will be looking for those who will take the time and effort to be
-            committed in the club. {" "}
           </p>
           <p id="line">  </p>
           <h1 id="newStudents"> For New and Freshmen students </h1>
@@ -104,11 +95,11 @@ export default class Faq extends React.Component {
             Sorry about that! We’re in the process of making HKIS Clubs as
             comprehensive as possible, creating the first complete directory of
             student organizations at HKIS. As a club leader, you will have access to editing your club on the website via the admin portal. 
-            Please fill out the <a href="https://forms.gle/TeSWXHo57nJyLXhHA"> Missing Club Form </a>  {" "}
+            Please fill out the <a href=""> Missing Club Form </a>  {" "}
           </p>
 
           <h4> I have another question! </h4>
-          <p id="feedback_form"> Please let us know on our <a href="https://forms.gle/E5Lbhqd4BY8xE7mm9"> Feedback Form </a> </p>
+          <p id="feedback_form"> Please let us know on our <a href=""> Feedback Form </a> </p>
         </div>
       </div>
     );
