@@ -1,5 +1,5 @@
 {
-  "name": "project1",
+  "name": "hkisclubsfrontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,7 @@
     "react-scripts": "3.4.1"
   },
   "engines": {
-    "npm": "6.13.4",
+    "npm": "6.14.7",
     "node": "12.14.1"
   },
   "scripts": {
