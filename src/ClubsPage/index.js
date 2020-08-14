@@ -29,7 +29,7 @@ class ClubsPage extends React.Component {
 
   componentDidMount() {
     // get list of clubs, assume already authenticated
-    fetch(`${API_URL}/club?items=20`, {
+    fetch(`${API_URL}/club?items=120`, {
       method: "GET",
       credentials: "include",
       headers: {
@@ -59,7 +59,7 @@ class ClubsPage extends React.Component {
   }
 
   fetch_url = () => {
-    let url = `${API_URL}/club?page=${this.state.page}&items=120`;
+    let url = `${API_URL}/club?page=${this.state.page}&items=30`;
     const query = this.state.query;
     if (Object.keys(query).length > 0){
       for (const key in query) {
