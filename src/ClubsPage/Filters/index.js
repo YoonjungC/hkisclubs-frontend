@@ -15,6 +15,7 @@ import IosSearchOutline from "react-ionicons/lib/IosSearchOutline";
 
 const CATEGORIES = [
   "Student Leadership",
+  "Councils",
   "Service Clubs",
   "Fine/Performing Arts",
   "Publications",
