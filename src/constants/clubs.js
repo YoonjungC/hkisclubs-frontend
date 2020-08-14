@@ -493,6 +493,7 @@ export let CLUB_LIST = [
 export let buttons = [
   "All",
   "Student Leadership",
+  'Councils',
   "Service Clubs",
   "Fine/Performing Arts",
   "Publications",
