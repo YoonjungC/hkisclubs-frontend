@@ -29,7 +29,7 @@ class ClubsPage extends React.Component {
 
   componentDidMount() {
     // get list of clubs, assume already authenticated
-    fetch(`${API_URL}/club?items=120`, {
+    fetch(`${API_URL}/club?items=30`, {
       method: "GET",
       credentials: "include",
       headers: {
