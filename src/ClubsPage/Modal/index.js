@@ -120,15 +120,15 @@ class ClubsPage extends React.Component {
                 ? null
                 : (
                   <div id="zoom">
-                      <h3> Club Meeting Zoom Link </h3> 
-                      {
-                        club.zoom.map((zoom) => (
-                          <div> 
-                            <a href={zoom.zoom_url} target="_blank"> {zoom.zoom_url}</a>
-                          </div>
-                        ))
-                      }
-                    </div>
+                    <div> 
+                    <h3> Club Meeting Zoom Link </h3>
+                    {
+                      club.zoom.map((zoom)=> 
+                        <p> {zoom.zoom_description}: {zoom.zoom_url} </p>
+                      )
+                    }
+                  </div>
+                </div>
                 )
               }
                 {
