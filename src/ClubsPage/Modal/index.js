@@ -102,7 +102,7 @@ class ClubsPage extends React.Component {
                 }
                 </p>
                 </div>
-                {/* {
+                {
                   club.zoom && club.zoom.length === 0 // checking the lenght for empty string
                   ? null 
                   : (
@@ -114,23 +114,7 @@ class ClubsPage extends React.Component {
                       </p>
                     </div>
                   )
-                } */}
-                {
-                club.zoom.length === 0 
-                ? null
-                : (
-                  <div id="zoom">
-                      <h3> Club Meeting Zoom Link </h3> 
-                      {
-                        club.zoom.map((zoom) => (
-                          <div> 
-                            <a href={zoom.zoom_url} target="_blank"> {zoom.zoom_url}</a>
-                          </div>
-                        ))
-                      }
-                    </div>
-                )
-              }
+                }
                 {
                   club.application 
                   ? (
