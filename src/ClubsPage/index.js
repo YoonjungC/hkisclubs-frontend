@@ -29,7 +29,7 @@ class ClubsPage extends React.Component {
 
   componentDidMount() {
     // get list of clubs, assume already authenticated
-    fetch(`${API_URL}/club?items=30`, {
+    fetch(`${API_URL}/club?items=50`, {
       method: "GET",
       credentials: "include",
       headers: {
@@ -228,10 +228,10 @@ class ClubsPage extends React.Component {
                     dataLength={this.state.totalClubs} //This is important field to render the next data
                     next={this.getClubs}
                     hasMore={this.state.clubs.length < this.state.totalClubs}
-                    loader={<h4>Fetching more clubs...</h4>}
+                    loader={<h4> </h4>}
                     endMessage={
                       <p style={{textAlign: 'center'}}>
-                        <b> Loaded all Clubs </b>
+                        <b>  </b>
                       </p>
                     }>
                       <div className="allClubs_container">
