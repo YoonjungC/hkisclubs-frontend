@@ -13,6 +13,8 @@ import LogoTwitter from "react-ionicons/lib/LogoTwitter";
 import IosGlobeOutline from "react-ionicons/lib/IosGlobeOutline";
 import IosTime from "react-ionicons/lib/IosTime";
 import IosCube from "react-ionicons/lib/IosCube";
+import MdChatboxes from "react-ionicons/lib/MdChatboxes";
+import MdCalendar from "react-ionicons/lib/MdCalendar";
 
 import "./index.css";
 
@@ -22,6 +24,7 @@ const CONTACT_TYPE = {
   'twitter': LogoTwitter,
   'schoology invite': IosSchool,
   'website': IosGlobeOutline,
+  'discord': MdChatboxes
 }
 
 class ClubsPage extends React.Component {
@@ -77,7 +80,22 @@ class ClubsPage extends React.Component {
                   
                 </Carousel>
               </div>
-            
+              
+              {/* {
+                  club.events.length === 0
+                  ? null 
+                  : (
+                    <div id="events"> 
+                    <h3> Major {club.name} Events </h3>
+                    <p>{club.events}</p>
+                    </div>
+                  )
+                } */}
+                <div className="description" id="events"> 
+                    <h3 id="text"> Major {club.name} Events </h3>
+                    <p>{club.events}</p>
+                </div>
+              
               {/* width 70%, flex-direction: column */}
               {/* description */}
               {/* profiles */}
@@ -86,21 +104,27 @@ class ClubsPage extends React.Component {
               <div className="basicInfo">
                 <h3> <span> </span>  Basic Info </h3>
                 <div className="leader">
-                <p> <MdPerson color="#bfbdbd"/> 
-                 {club.members}</p>
+                  <p> <MdPerson color="#bfbdbd"/> 
+                  {club.members}</p>
                 </div>
                 <div className="category">
-                <p> <IosCube color="#bfbdbd"/> 
-                 {club.category}</p>
+                  <p> <IosCube color="#bfbdbd"/> 
+                  {club.category}</p>
                 </div>
                 <div className="meeting">
-                <p> <IosTime color="#bfbdbd"/> 
-                {
-                  club.meeting && club.meeting.length !== 0 
-                  ? <span>{club.meeting[0].day} at {club.meeting[0].time}</span>
-                  : null
-                }
-                </p>
+                  <p> <IosTime color="#bfbdbd"/> 
+                  {
+                    club.meeting && club.meeting.length !== 0 
+                    ? <span>{club.meeting[0].day} at {club.meeting[0].time}</span>
+                    : null
+                  }
+                  </p>
+                </div>
+                <div id="frequency">
+                  <h3> Frequency of Meetings </h3> 
+                  <p> <MdCalendar color="#bfbdbd"/> 
+                      {club.frequency}
+                  </p>
                 </div>
                 {
                   club.zoom && club.zoom.length === 0 // checking the lenght for empty string

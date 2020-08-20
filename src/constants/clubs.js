@@ -13,7 +13,7 @@ export let CLUB_LIST = [
     //   require("../media/ocean.jpg"),
     //   require("../media/star.jpeg"),
     // ],
-    category: "Student Leadership",
+    category: "Leadership Teams",
     members: "20 - 50 Members",
     contact: ["instagram.com", "facebook.com", "gmail.com"],
     leaders: [
@@ -47,7 +47,7 @@ export let CLUB_LIST = [
       require("../media/ocean.jpg"),
       require("../media/star.jpeg"),
     ],
-    category: "Student Leadership",
+    category: "Leadership Teams",
     leaders: ["Samuel", "Joseph", "Andrea"],
     app_requirement: true,
     events: [
@@ -60,7 +60,7 @@ export let CLUB_LIST = [
     description:
       "The HKIS chapter of the National Honor Society recognizes students based on scholarship, character, leadership, and service. We try to increase the visibility of NHS on campus and make our events more beneficial to HKIS students. We have continued to strengthen our seven initiatives: the Homework Coaches, 'Get a Life' Speaker Series, Blood Drive, Freshman Test Prep, and Thanksgiving Dinner.",
     photo: [require("../media/NHS.png"), require("../media/NHS.png")],
-    category: "Student Leadership",
+    category: "Leadership Teams",
     leaders: ["Samuel", "Joseph", "Andrea"],
     app_requirement: true,
     events: [
@@ -73,7 +73,7 @@ export let CLUB_LIST = [
     description:
       "The SDLT helps empower the HKIS community with technology. Our core services include the SDLT Help Desk, as well as after school training sessions and digital literacy sessions for new students. In addition, our expertise is applying various tools and promote the use and understanding of the latest technology. The Digital Communication Alliance in SDLT help supporting media communication in school via video streaming, digital content creation and video production for special projects.",
     photo: [require("../media/SDLT.png")],
-    category: "Student Leadership",
+    category: "Leadership Teams",
     leaders: ["Samuel", "Joseph", "Andrea"],
     app_requirement: true,
     events: [
@@ -430,7 +430,7 @@ export let CLUB_LIST = [
     description:
       "The robotic club's main goal is to help students explore the field of robotics, expand their creativity, go beyond the classroom and add to their skill set.",
     photo: [require("../media/img2.jpg")],
-    category: "Academic Pursuits",
+    category: "Academics",
   },
   {
     club_name: "YOUNG WOMEN'S SOCIETY",
@@ -444,21 +444,21 @@ export let CLUB_LIST = [
     description:
       "The purpose of this club is for qualified MNN students who are passionate about the Chinese language to help their peers in homework and/or projects. In addition, this club acts as a communication centre where both students and tutors' will be able to develop his or her Chinese culture by improving their Chinese language skills. There are students at a designated room during free periods and afterschool that are willing to help students who come in seeking help with their Chinese homework, projects, etc.",
     photo: [require("../media/img2.jpg")],
-    category: "Academic Pursuits",
+    category: "Academics",
   },
   {
     club_name: "MATH AND SCIENCE TUTORING CENTER",
     description:
       "The Math and Science Center aims to provide assistance to students in math and science. We also hope to promote a greater interest in math and science through Mole Day and Pi Day events. There is a 1:1 student-tutoring program where students may be tutored one on one with a tutor over the long term. ",
     photo: [require("../media/img2.jpg")],
-    category: "Academic Pursuits",
+    category: "Academics",
   },
   {
     club_name: "SOUTH EAST ASIAN MATHEMATICS COMPETITION (SEAMC)",
     description:
       "SEAMC is a club where students can come and hone their math skills by participating in international and local competitions such as the actual SEAMC competition itself, Purple Comet, and other competitions while learning challenging concepts. For those of you who enjoy math and/or want to get better at it, this is the place for you.",
     photo: [require("../media/img2.jpg")],
-    category: "Academic Pursuits",
+    category: "Academics",
   },
   {
     club_name: "KIDS4KIDS",
@@ -492,14 +492,14 @@ export let CLUB_LIST = [
 
 export let buttons = [
   "All",
-  "Student Leadership",
+  "Leadership Teams",
   'Councils',
   "Service Clubs",
   "Fine/Performing Arts",
   "Publications",
-  "Athletic Pursuits",
+  "Athletics",
   "Special Interest",
-  "Academic Pursuits",
+  "Academics",
   "New Initiatives",
   "Service on Saturdays",
 ];

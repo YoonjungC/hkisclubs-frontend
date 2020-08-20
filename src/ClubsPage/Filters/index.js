@@ -14,15 +14,14 @@ import "./index.css";
 import IosSearchOutline from "react-ionicons/lib/IosSearchOutline";
 
 const CATEGORIES = [
-  "Student Leadership",
+  "Leadership Teams",
   "Councils",
   "Service Clubs",
   "Fine/Performing Arts",
   "Publications",
-  "Athletic Pursuits",
+  "Athletics",
   "Special Interest",
-  "Academic Pursuits",
-  "New Initiatives",
+  "Academics",
   "Service on Saturdays"
 ]
 

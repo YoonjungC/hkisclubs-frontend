@@ -23,13 +23,16 @@ class ClubsPage extends React.Component {
 
     page: 1,
     totalClubs: 0,
+    
+    query: {},
 
-    query: {}
+    items: Array.from({ length: 20 }),
+    hasMore: true
   };
 
   componentDidMount() {
     // get list of clubs, assume already authenticated
-    fetch(`${API_URL}/club?items=30`, {
+    fetch(`${API_URL}/club?items=10`, {
       method: "GET",
       credentials: "include",
       headers: {
@@ -182,6 +185,20 @@ class ClubsPage extends React.Component {
     }
   }
 
+  fetchMoreData = () => {
+    if (this.state.items.length >= 500) {
+      this.setState({ hasMore: false });
+      return;
+    }
+    // a fake async api call like which sends
+    // 20 more records in .5 secs
+    setTimeout(() => {
+      this.setState({
+        items: this.state.items.concat(Array.from({ length: 20 }))
+      });
+    }, 500);
+  };
+
   render() {
     return (
       <div className="clubs_page"> 
@@ -224,14 +241,31 @@ class ClubsPage extends React.Component {
             {
               !this.state.load && this.state.clubs.length > 0
                 ? (
+                  // <InfiniteScroll
+                  //   dataLength={this.state.items.length}
+                  //   next={this.fetchMoreData}
+                  //   hasMore={this.state.hasMore}
+                  //   loader={<h4>Loading...</h4>}
+                  //   endMessage={
+                  //     <p style={{ textAlign: "center" }}>
+                  //       <b>Yay! You have seen it all</b>
+                  //     </p>
+                  //   }
+                  // >
+                  //   {this.state.items.map((i, index) => (
+                  //     <div key={index}>
+                  //       div - #{index}
+                  //     </div>
+                  //   ))}
+                  // </InfiniteScroll>
                   <InfiniteScroll
-                    dataLength={this.state.totalClubs} //This is important field to render the next data
+                    dataLength={this.state.clubs.length} //This is important field to render the next data
                     next={this.getClubs}
                     hasMore={this.state.clubs.length < this.state.totalClubs}
-                    loader={<h4>Fetching more clubs...</h4>}
+                    loader={<h4></h4>}
                     endMessage={
                       <p style={{textAlign: 'center'}}>
-                        <b> Loaded all Clubs </b>
+                        <b>  </b>
                       </p>
                     }>
                       <div className="allClubs_container">
