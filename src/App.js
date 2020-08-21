@@ -108,6 +108,7 @@ class App extends React.Component {
             </a>
             by HKIS Clubs
             </p> 
+            <p> Currently in {process.env.NODE_ENV} </p>
           </div>
         </div>
       </div>
