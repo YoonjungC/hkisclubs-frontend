@@ -81,20 +81,16 @@ class ClubsPage extends React.Component {
                 </Carousel>
               </div>
               
-              {/* {
-                  club.events.length === 0
-                  ? null 
-                  : (
+              {
+                  club.events && club.events.length > 0
+                  ? (
                     <div id="events"> 
-                    <h3> Major {club.name} Events </h3>
-                    <p>{club.events}</p>
+                      <h3> Major {club.name} Events </h3>
+                      <p>{club.events}</p>
                     </div>
                   )
-                } */}
-                <div className="description" id="events"> 
-                    <h3 id="text"> Major {club.name} Events </h3>
-                    <p>{club.events}</p>
-                </div>
+                  : null
+                }
               
               {/* width 70%, flex-direction: column */}
               {/* description */}
@@ -120,12 +116,16 @@ class ClubsPage extends React.Component {
                   }
                   </p>
                 </div>
-                <div id="frequency">
-                  <h3> Frequency of Meetings </h3> 
-                  <p> <MdCalendar color="#bfbdbd"/> 
-                      {club.frequency}
-                  </p>
-                </div>
+                {
+                  club.frequency ? (
+                    <div id="frequency">
+                      <h3> Frequency of Meetings </h3> 
+                      <p> <MdCalendar color="#bfbdbd"/> 
+                          {club.frequency}
+                      </p>
+                    </div>
+                  ): null
+                }
                 {
                   club.zoom && club.zoom.length === 0 // checking the lenght for empty string
                   ? null 
