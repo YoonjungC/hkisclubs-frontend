@@ -1,50 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./index.css";
-
-import IosBookmarkOutline from "react-ionicons/lib/IosBookmarkOutline";
-import IosDocumentOutline from "react-ionicons/lib/IosDocumentOutline";
-import IosGlobeOutline from "react-ionicons/lib/IosGlobeOutline";
-import IosChatboxesOutline from "react-ionicons/lib/IosChatboxesOutline";
-
-const INFO_SECTIONS = [
-  {
-    text: "All Club Information in One Space",
-    logo: <IosChatboxesOutline fontSize="100px" />,
-  },
-  {
-    text: "Find Out Events Happening for Each Club",
-    logo: <IosGlobeOutline fontSize="100px" />,
-  },
-  {
-    text: "Bookmark Your Favorite Clubs",
-    logo: <IosDocumentOutline fontSize="100px" />,
-  },
-];
 
 export default class Home extends React.Component {
   getLogo = (Logo) => React.createElement(Logo);
-
-  /* componentDidMount() {
-    fetch('http://127.0.0.1:8000/google')
-    .then(response => response.json())
-    .then(response => {
-      // console.log('response', response)
-      const google_redirect_url = response.google_auth;
-      window.location.assign(google_redirect_url);
-    })
-  } */
-
-  cell = (text, logo) => {
-    return (
-      <div className="infoContainer">
-        <h4 className="infoBox">
-          {text}
-          <div>{logo}</div>
-        </h4>
-      </div>
-    );
-  };
 
   render() {
     return (
@@ -86,11 +44,3 @@ export default class Home extends React.Component {
     );
   }
 }
-
-/* <div className="boxes"> 
-          {INFO_SECTIONS.map((info) => (
-            this.cell(info.text, info.logo)
-          ))}
-          </div> 
-          
-    */

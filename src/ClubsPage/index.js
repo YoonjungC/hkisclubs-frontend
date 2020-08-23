@@ -47,16 +47,13 @@ class ClubsPage extends React.Component {
 
       // if success, the user is authenticated and has bookmarks
       let bookmarked = this.props.auth.user.saved || [];
-      console.log('on component mount', data.count)
+      // console.log('on component mount', data.count)
 
       this.setState({
         clubs: data.clubs,
         totalClubs: data.count,
         load: false,
         bookmarked,
-        // comment out later
-        // selectedClub: data.clubs[0],
-        // modalOpen: true,
       })
     })
   }
@@ -132,6 +129,7 @@ class ClubsPage extends React.Component {
     this.getClubs();
   }
 
+  // updates saved array and puts it into bookmarked state
   onBookmark = (clubId) => {
     fetch(`${API_URL}/club/bookmark/${clubId}`, {
       method: "GET",
@@ -143,7 +141,7 @@ class ClubsPage extends React.Component {
     .then(response => response.json())
     .then(data => {
       if (data.success) {
-        this.props.updateBookmarks(data.user.saved); //updates parent component
+        this.props.updateBookmarks(data.user.saved); //updates parent component by using updateBookmarked in App.js
         this.setState({ 
           bookmarked: data.user.saved, //updates this current component which is clubs page
         })
@@ -160,7 +158,7 @@ class ClubsPage extends React.Component {
     if (this.state.saved) {
       fetch(`${API_URL}/club/saved`, {
         method: "GET",
-        credentials: "include",
+        credentials: "include", //cookie
         headers: {
           "Access-Control-Allow-Credentials": true
         }
