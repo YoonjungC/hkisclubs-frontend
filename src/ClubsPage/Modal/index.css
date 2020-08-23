@@ -294,7 +294,7 @@
   margin-bottom: 20px;
 }
 
-.modal-container .modal-body .left .description #events
+.modal-container .modal-body .left #events
 {
     width: 100%;
     box-shadow: transparent 0px 0px 0px;
