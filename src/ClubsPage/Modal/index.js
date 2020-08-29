@@ -110,8 +110,8 @@ class ClubsPage extends React.Component {
                 <div className="meeting">
                   <p> <IosTime color="#bfbdbd"/> 
                   {
-                    club.meeting && club.meeting.length !== 0 
-                    ? <span>{club.meeting[0].day} at {club.meeting[0].time}</span>
+                    club.meeting && club.meeting.length !== 0 && club.meeting[0].day && club.meeting[0].time
+                    ? <span>{club.meeting[0].day } at {club.meeting[0].time}</span>
                     : null
                   }
                   </p>
@@ -127,14 +127,14 @@ class ClubsPage extends React.Component {
                   ): null
                 }
                 {
-                  club.zoom && club.zoom.length === 0 // checking the lenght for empty string
+                  club.zoom===undefined || club.zoom===null || club.zoom.length === 0 // checking the lenght for empty string
                   ? null 
                   : (
                     <div id="zoom">
                       <h3>Club Meeting Zoom Link</h3> 
                       <p id="zoomLink"> 
                         <IosSchool color="#bfbdbd"/>
-                        <a href={club.zoom}>Zoom Link</a>
+                        <a href={club.zoom && club.zoom.includes("http") ? club.zoom : "http://" + club.zoom}>Zoom Link</a>
                       </p>
                     </div>
                   )
@@ -156,10 +156,16 @@ class ClubsPage extends React.Component {
                       <h3> Contact </h3> 
                       {
                         club.contact.map((contact) => (
-                          <div id="contactLinks"> 
-                            <a href={contact.url}> {React.createElement(CONTACT_TYPE[contact.description], {color: '#bfbdbd'})} </a>
-                            <a id="link" href={contact.url} target="_blank"> {contact.description} </a>
-                          </div>
+                          // TODO: remove add-hoc solution - check if they are null, then remove it 
+                          //throw error if leader create contact link without description 
+                          //issue: leader creates contact without description/url 
+                          contact !== null && contact.hasOwnProperty("url") && contact.hasOwnProperty("description")?
+                            (
+                              <div id="contactLinks"> 
+                                <a href={contact.url.includes("http") ? contact.url : "http://" + contact.url}> {React.createElement(CONTACT_TYPE[contact.description], {color: '#bfbdbd'})} </a>
+                                <a id="link" href={contact.url.includes("http") ? contact.url : "http://" + contact.url} target="_blank"> {contact.description} </a>
+                              </div>
+                            ) : null
                         ))
                       }
                     </div>

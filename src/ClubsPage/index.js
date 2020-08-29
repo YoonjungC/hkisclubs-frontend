@@ -222,7 +222,7 @@ class ClubsPage extends React.Component {
                     <div> 
                       <div className="boxes">
                       <div id="first">
-                        <h4> 1. Tap the “bookmark” button on the top of a club </h4>
+                        <h4> 1. Once you click on a club, click on the “bookmark” button which is on the top of the club </h4>
                       </div>
                       <div  id="second">
                         <h4> 2. The club will get added to your saved clubs </h4>
