@@ -108,10 +108,22 @@ class ClubsPage extends React.Component {
                   {club.category}</p>
                 </div>
                 <div className="meeting">
-                  <p> <IosTime color="#bfbdbd"/> 
+                  <p> 
                   {
-                    club.meeting && club.meeting.length !== 0 && club.meeting[0].day && club.meeting[0].time
-                    ? <span>{club.meeting[0].day } at {club.meeting[0].time}</span>
+                    club.meeting
+                    ? (
+                      // <h1> {club.meeting.length} </h1>
+                      <div>
+                        <h3> Meeting Times </h3>
+                        <ul style={{listStyle: "none", paddingLeft: 0, display: "inline"}}>
+                          {club.meeting.map((meeting) =>
+                            <li>
+                              <IosTime color="#bfbdbd" /> {meeting.day} at {meeting.time}
+                            </li>
+                          )}
+                        </ul>
+                      </div>
+                    ) 
                     : null
                   }
                   </p>
@@ -134,7 +146,7 @@ class ClubsPage extends React.Component {
                       <h3>Club Meeting Zoom Link</h3> 
                       <p id="zoomLink"> 
                         <IosSchool color="#bfbdbd"/>
-                        <a href={club.zoom && club.zoom.includes("http") ? club.zoom : "http://" + club.zoom}>Zoom Link</a>
+                        <a href={club.zoom && club.zoom.includes("http") ? club.zoom : "http://" + club.zoom} target="_blank">Zoom Link</a>
                       </p>
                     </div>
                   )
@@ -162,7 +174,7 @@ class ClubsPage extends React.Component {
                           contact !== null && contact.hasOwnProperty("url") && contact.hasOwnProperty("description")?
                             (
                               <div id="contactLinks"> 
-                                <a href={contact.url.includes("http") ? contact.url : "http://" + contact.url}> {React.createElement(CONTACT_TYPE[contact.description], {color: '#bfbdbd'})} </a>
+                                <a href={contact.url.includes("http") ? contact.url : "http://" + contact.url} target="_blank"> {React.createElement(CONTACT_TYPE[contact.description], {color: '#bfbdbd'})} </a>
                                 <a id="link" href={contact.url.includes("http") ? contact.url : "http://" + contact.url} target="_blank"> {contact.description} </a>
                               </div>
                             ) : null
