@@ -260,10 +260,10 @@ class ClubsPage extends React.Component {
                     dataLength={this.state.clubs.length} //This is important field to render the next data
                     next={this.getClubs}
                     hasMore={this.state.clubs.length < this.state.totalClubs}
-                    loader={<h4></h4>}
+                    loader={<h4> Keep scrolling down to load more clubs </h4>}
                     endMessage={
                       <p style={{textAlign: 'center'}}>
-                        <b> Keep scrolling down to load more clubs </b>
+                        <b> </b>
                       </p>
                     }>
                       <div className="allClubs_container">
