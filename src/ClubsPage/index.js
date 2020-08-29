@@ -263,7 +263,7 @@ class ClubsPage extends React.Component {
                     loader={<h4></h4>}
                     endMessage={
                       <p style={{textAlign: 'center'}}>
-                        <b>  </b>
+                        <b> Keep scrolling down to load more clubs </b>
                       </p>
                     }>
                       <div className="allClubs_container">
