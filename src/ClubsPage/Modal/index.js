@@ -146,7 +146,7 @@ class ClubsPage extends React.Component {
                       <h3>Club Meeting Zoom Link</h3> 
                       <p id="zoomLink"> 
                         <IosSchool color="#bfbdbd"/>
-                        <a href={club.zoom && club.zoom.includes("http") ? club.zoom : "http://" + club.zoom} target="_blank">Zoom Link</a>
+                        <a href={club.zoom && club.zoom.includes("https") ? club.zoom : "https://" + club.zoom} target="_blank">Zoom Link</a>
                       </p>
                     </div>
                   )
@@ -174,8 +174,8 @@ class ClubsPage extends React.Component {
                           contact !== null && contact.hasOwnProperty("url") && contact.hasOwnProperty("description")?
                             (
                               <div id="contactLinks"> 
-                                <a href={contact.url.includes("http") ? contact.url : "http://" + contact.url} target="_blank"> {React.createElement(CONTACT_TYPE[contact.description], {color: '#bfbdbd'})} </a>
-                                <a id="link" href={contact.url.includes("http") ? contact.url : "http://" + contact.url} target="_blank"> {contact.description} </a>
+                                <a href={contact.url.includes("https") ? contact.url : "https://" + contact.url} target="_blank"> {React.createElement(CONTACT_TYPE[contact.description], {color: '#bfbdbd'})} </a>
+                                <a id="link" href={contact.url.includes("https") ? contact.url : "https://" + contact.url} target="_blank"> {contact.description} </a>
                               </div>
                             ) : null
                         ))
