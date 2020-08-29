@@ -95,11 +95,11 @@ export default class Faq extends React.Component {
             Sorry about that! We’re in the process of making HKIS Clubs as
             comprehensive as possible, creating the first complete directory of
             student organizations at HKIS. As a club leader, you will have access to editing your club on the website via the admin portal. 
-            Please fill out the <a href=""> Missing Club Form </a>  {" "}
+            Please fill out the <a href="https://forms.gle/wXs2TY2ePNFtQmBk9"> Missing Club Form </a>  {" "}
           </p>
 
           <h4> I have another question! </h4>
-          <p id="feedback_form"> Please let us know on our <a href=""> Feedback Form </a> </p>
+          <p id="feedback_form"> Please let us know on our <a href="https://forms.gle/GpJgdknbTq3puwjS9"> Feedback Form </a> </p>
         </div>
       </div>
     );
