@@ -106,7 +106,7 @@ class App extends React.Component {
             <a href="/" id="heart">
               <img src={require("./media/heart.png")} alt="heart" width="30px;" />
             </a>
-            by HKIS Clubs
+            by Yoonjung Choi 
             </p> 
           </div>
         </div>
