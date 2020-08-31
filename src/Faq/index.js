@@ -21,6 +21,10 @@ export default class Faq extends React.Component {
             discovering new clubs throughout the year, not just at the club
             marketplace.
           </p>
+          <h4> * Clarifications * </h4>
+          <p> ‘Co-curriculars (CCs)’ will now refer to clubs, initiatives, and Leadership Teams</p>
+          <p> ‘Initiatives’ will now refer to the organisations under clubs (e.g. the Chemistry Initiative and the Biology Initiative under the Science Club).</p>
+          <p> ‘Pilot Clubs/Initiatives’ will now replace the term ‘new initiatives’ (which is what we used to call new clubs still in the process of their two-year trial period).</p>
           <h4> How can I provide feedback? </h4>
           <p>
             {" "}
