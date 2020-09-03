@@ -25,9 +25,6 @@ class ClubsPage extends React.Component {
     totalClubs: 0,
     
     query: {},
-
-    items: Array.from({ length: 20 }),
-    hasMore: true
   };
 
   componentDidMount() {
@@ -47,7 +44,7 @@ class ClubsPage extends React.Component {
 
       // if success, the user is authenticated and has bookmarks
       let bookmarked = this.props.auth.user.saved || [];
-      // console.log('on component mount', data.count)
+      console.log('on component mount', data.count)
 
       this.setState({
         clubs: data.clubs,
@@ -59,7 +56,7 @@ class ClubsPage extends React.Component {
   }
 
   fetch_url = () => {
-    let url = `${API_URL}/club?page=${this.state.page}&items=30`;
+    let url = `${API_URL}/club?page=${this.state.page}&items=10`;
     const query = this.state.query;
     if (Object.keys(query).length > 0){
       for (const key in query) {
@@ -183,21 +180,10 @@ class ClubsPage extends React.Component {
     }
   }
 
-  fetchMoreData = () => {
-    if (this.state.items.length >= 500) {
-      this.setState({ hasMore: false });
-      return;
-    }
-    // a fake async api call like which sends
-    // 20 more records in .5 secs
-    setTimeout(() => {
-      this.setState({
-        items: this.state.items.concat(Array.from({ length: 20 }))
-      });
-    }, 500);
-  };
-
   render() {
+    console.log('current club length', this.state.clubs.length)
+    console.log('total club length', this.state.totalClubs)
+
     return (
       <div className="clubs_page"> 
         <div className="main_div">
