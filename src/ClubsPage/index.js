@@ -181,9 +181,8 @@ class ClubsPage extends React.Component {
   }
 
   render() {
-    console.log('current club length', this.state.clubs.length)
-    console.log('total club length', this.state.totalClubs)
-
+    console.log('page number', this.state.page)
+    
     return (
       <div className="clubs_page"> 
         <div className="main_div">
