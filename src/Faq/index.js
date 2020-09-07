@@ -22,6 +22,7 @@ export default class Faq extends React.Component {
             discovering new clubs throughout the year, not just at the club
             marketplace.
           </p>
+          
           <h4> * Terminology Clarifications * </h4>
           <p>
             {" "}
@@ -38,13 +39,7 @@ export default class Faq extends React.Component {
             Initiatives’ will now replace the term ‘new initiatives’ (which is
             what we used to call new clubs still in the process of their
             two-year trial period). </p>
-          <p>
-            {" "}
-            We’re so excited to let everyone at HKIS contribute to the
-            development of Hkis Clubs! Your feedback is incredibly important to
-            improving the website. Please let us know your feedback on our
-            feedback form.{" "}
-          </p>
+          
           <h4> How do I use this site? </h4>
           <p>
             The #1 way to use this site is to browse clubs at HKIS! Pursue your
@@ -125,7 +120,9 @@ export default class Faq extends React.Component {
           <h4> I have another question! </h4>
           <p id="feedback_form">
             {" "}
-            Please let us know on our{" "}
+            We’re so excited to let everyone at HKIS contribute to the
+            development of Hkis Clubs! Your feedback is incredibly important to
+            improving the website. Please let us know on our{" "}
             <a href="https://forms.gle/GpJgdknbTq3puwjS9">
               {" "}
               Feedback Form{" "}
