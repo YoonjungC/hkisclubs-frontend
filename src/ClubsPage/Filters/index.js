@@ -22,7 +22,7 @@ const CATEGORIES = [
   "Athletics",
   "Special Interest",
   "Academics",
-  "Service on Saturdays"
+  // "Service on Saturdays"
 ]
 
 const MEMBERS = [

@@ -501,5 +501,5 @@ export let buttons = [
   "Special Interest",
   "Academics",
   "New Initiatives",
-  "Service on Saturdays",
+  // "Service on Saturdays",
 ];
