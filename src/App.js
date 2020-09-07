@@ -101,13 +101,7 @@ class App extends React.Component {
     
         <div id="footer"> 
           <div id="bottomfooter">
-            <h3 style={{color: "gray", fontSize: 13, fontWeight: "normal", fontStyle: "italic"}}>
-              Made with  
-            <a href="/" id="heart">
-              <img src={require("./media/heart.png")} alt="heart" width="15px;" />
-            </a>
-            by Yoonjung Choi 
-            </h3> 
+            
           </div>
         </div>
       </div>  

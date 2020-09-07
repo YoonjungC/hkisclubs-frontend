@@ -99,6 +99,17 @@ export default class Faq extends React.Component {
           <h4> I have another question! </h4>
           <p id="feedback_form"> Please let us know on our <a href="https://forms.gle/GpJgdknbTq3puwjS9"> Feedback Form </a> </p>
         </div>
+        <div id="footer"> 
+          <div id="bottomfooter">
+            <h3 style={{color: "gray", fontSize: 13, fontWeight: "normal", fontStyle: "italic"}}>
+              Made with  
+            <a href="/" id="heart">
+              <img src={require("../media/heart.png")} alt="heart" width="15px;" />
+            </a>
+            by Yoonjung Choi 
+            </h3> 
+          </div>
+        </div> 
       </div>
     );
   }
