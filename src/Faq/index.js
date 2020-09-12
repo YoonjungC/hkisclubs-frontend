@@ -147,8 +147,13 @@ export default class Faq extends React.Component {
                   width="15px;"
                 />
               </a>
-              by Yoonjung Choi
+              by Yoonjung Choi @SDLT 
             </h3>
+            <img
+                  src={require("../media/sdltlogo.png")}
+                  alt="sdltlogo"
+                  width="100px;"
+                />
           </div>
         </div>
       </div>
