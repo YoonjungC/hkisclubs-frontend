@@ -143,7 +143,7 @@ class ClubsPage extends React.Component {
                   ? null 
                   : (
                     <div id="zoom">
-                      <h3>Club Meeting Zoom Link</h3> 
+                      <h3>Virtual Club Marketplace Zoom Link</h3> 
                       <p id="zoomLink"> 
                         <IosSchool color="#bfbdbd"/>
                         <a href={club.zoom && club.zoom.includes("https") ? club.zoom : "https://" + club.zoom} target="_blank">Zoom Link</a>
