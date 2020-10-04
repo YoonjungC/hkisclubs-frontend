@@ -40,33 +40,6 @@ export default class Home extends React.Component {
             
           </div>
         </div>
-        <div id="footer">
-          <div id="bottomfooter">
-            <h3
-              style={{
-                color: "gray",
-                fontSize: 13,
-                fontWeight: "normal",
-                fontStyle: "italic",
-              }}
-            >
-              Made with
-              <a href="/" id="heart">
-                <img
-                  src={require("../media/heart.png")}
-                  alt="heart"
-                  width="15px;"
-                />
-              </a>
-              by Yoonjung Choi @SDLT
-            </h3>
-            <img
-                  src={require("../media/sdltlogo.png")}
-                  alt="sdltlogo"
-                  width="100px;"
-                />
-          </div>
-        </div>
       </div>
     );
   }

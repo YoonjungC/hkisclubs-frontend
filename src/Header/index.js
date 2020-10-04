@@ -10,7 +10,7 @@ import { ADMIN_URL } from "../constants/api";
 const Header = ({ auth, logout }) => (
   <div id="header">
     <a href="/">
-      <img id="hkislogo" src={require("../media/logo.png")} alt="top" width="200px;" />
+      <img id="hkislogo" src={require("../media/hkissdltlogo.png")} alt="top" width="300px;" />
     </a>
     <div className="links">
         <Link to="/">
